@@ -1,0 +1,20 @@
+import sys
+import string
+
+cases = int(sys.stdin.readline().rstrip())#Gets the number of line
+colors = []
+for caseNum in range(cases):
+
+    line = sys.stdin.readline().rstrip()#Walks through each line
+    colors.append(line)
+    
+for i in range(len(colors)):
+    if colors[i] == "red-violet" or colors[i] == "violet" or colors[i] == "blue-violet":
+        print("In order to make "+ colors[i]+ ", blue and red must be mixed.")
+    elif colors[i] == "red-orange" or colors[i] == "orange" or colors[i] == "yellow-orange":
+        print("In order to make "+ colors[i]+ ", red and yellow must be mixed.")
+    elif colors[i] == "yellow-green" or colors[i] == "green" or colors[i] == "blue-green":
+        print("In order to make "+ colors[i]+ ", blue and yellow must be mixed.")
+    elif colors[i] == "yellow" or colors[i] == "blue" or colors[i] == "red":
+        print("No colors need to be mixed to make "+ colors[i]+ ".")
+
