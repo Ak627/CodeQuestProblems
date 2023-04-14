@@ -1,0 +1,19 @@
+import sys
+import math
+
+
+
+cases = int(sys.stdin.readline().rstrip())#Gets the number of line
+
+for caseNum in range(cases):
+    amnt = int(sys.stdin.readline().rstrip())#Gets the number of line
+    nums = []
+    
+    for num in range(amnt):
+        nums.append(float(sys.stdin.readline().rstrip()))
+        
+    for i in range(len(nums)):
+        div1 = nums[i]-min(nums)
+        div2 = max(nums) - min(nums)
+        output = (div1/div2) * 255
+        print(round(output))
